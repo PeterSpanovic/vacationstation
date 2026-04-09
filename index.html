@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vacation Station Piran | Your Home in the Heart of Piran</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "primary-container": "#006fbe",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-fixed": "#ffdad4",
+                      "on-surface": "#1a1c1c",
+                      "inverse-primary": "#a0c9ff",
+                      "on-tertiary-fixed-variant": "#763226",
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary-fixed": "#3c0702",
+                      "on-primary-fixed-variant": "#00497f",
+                      "secondary-fixed": "#d9e2ff",
+                      "primary-fixed-dim": "#a0c9ff",
+                      "primary-fixed": "#d2e4ff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#375ca8",
+                      "primary": "#005695",
+                      "tertiary-fixed-dim": "#ffb4a6",
+                      "tertiary": "#873f32",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#1a438e",
+                      "on-secondary-fixed": "#001945",
+                      "on-background": "#1a1c1c",
+                      "surface-container-high": "#e8e8e8",
+                      "surface-tint": "#0061a6",
+                      "secondary-fixed-dim": "#b0c6ff",
+                      "on-primary-fixed": "#001c37",
+                      "on-tertiary-container": "#ffebe7",
+                      "surface-variant": "#e2e2e2",
+                      "inverse-on-surface": "#f1f1f1",
+                      "tertiary-container": "#a55648",
+                      "on-primary-container": "#e7f0ff",
+                      "secondary-container": "#8aacfe",
+                      "on-secondary-container": "#113e89",
+                      "outline-variant": "#c0c7d3",
+                      "on-surface-variant": "#414751",
+                      "error-container": "#ffdad6",
+                      "surface": "#f9f9f9",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#717782",
+                      "surface-container-highest": "#e2e2e2",
+                      "error": "#ba1a1a",
+                      "background": "#f9f9f9",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-dim": "#dadada",
+                      "surface-container": "#eeeeee"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "body": ["Plus Jakarta Sans"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 28, 55, 0.06);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #005695, #006fbe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Reveal on scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Sequential animation delays */
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* Smooth Nav Transition */
+        nav {
+            transition: background-color 0.4s ease, padding 0.4s ease, backdrop-filter 0.4s ease;
+        }
+        nav.scrolled {
+            background-color: rgba(249, 249, 249, 0.9);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent flex justify-between items-center px-6 md:px-12 py-6" id="navbar">
+<div class="font-headline text-2xl font-bold text-[#005695]">Vacation Station Piran</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#1a1c1c] font-headline text-lg tracking-tight hover:text-[#375ca8] transition-colors duration-300" href="#about">About</a>
+<a class="text-[#1a1c1c] font-headline text-lg tracking-tight hover:text-[#375ca8] transition-colors duration-300" href="#rooms">Rooms</a>
+<a class="text-[#1a1c1c] font-headline text-lg tracking-tight hover:text-[#375ca8] transition-colors duration-300" href="#activities">Activities</a>
+<a class="text-[#1a1c1c] font-headline text-lg tracking-tight hover:text-[#375ca8] transition-colors duration-300" href="#services">Services</a>
+<a class="text-[#1a1c1c] font-headline text-lg tracking-tight hover:text-[#375ca8] transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-medium shadow-md hover:scale-105 active:scale-95 transition-all duration-300" href="https://www.booking.com/hotel/si/guesthouse.sl.html?aid=390156">Book Now</a>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[10000ms] ease-out" data-alt="panoramic aerial view of Piran Slovenia at sunset with terracotta roofs and the deep blue Adriatic sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw0iL4nCkQ9gFreUVZJodWfP0o8rCfeSfvMbzIl-9BdBqJEbqJSEgCoj4OFlk1o2awUK4rknIc7VIARB5IMQiq_qgOZTN4K3Q7V6Q9i0QRbC-QJmWbxJKCzifLgsW1OvnLqCcLaL1runUOlFMdt9nsrxP24U5EiGk2A32Gar8oMOqbZZa59kLJd5J-uKIdke91tmIDte7JWT6OPfKuC5M8dFN21BKTkYANE8lgy6wtImprC1gsglChEhyztLZxyiQLQRCpWwQn-iY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-on-primary-fixed/20 to-surface"></div>
+</div>
+<div class="container mx-auto px-6 md:px-12 relative z-10">
+<div class="max-w-3xl">
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-primary-fixed mb-6 leading-tight animate-reveal-up">
+                Your Home in the <br/><span class="italic text-primary">Heart of Piran</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-xl font-light">
+                Experience the authentic soul of the Mediterranean in our family-run guesthouse.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl text-lg font-semibold text-center shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300" href="https://www.booking.com/hotel/si/guesthouse.sl.html?aid=390156">Book Your Stay</a>
+<a class="bg-surface-container-low/80 backdrop-blur-sm text-primary px-8 py-4 rounded-xl text-lg font-semibold text-center hover:bg-surface-container-high transition-all duration-300" href="#rooms">Explore Rooms</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface overflow-hidden" id="about">
+<div class="container mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative reveal">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="narrow sun-drenched cobblestone street in old town Piran with laundry hanging between stone buildings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClGCqJAG8iCNnRUOobNN2lgFE2nlT_TeEhqjil44WrQsG_Yxc63jm4td8chXY8_M9Q2HN9W9MvkA1NWuYMshP0EMkDPZXeOf6KNjbYdsxhrhT7fMRlUiSgpoW8AV8mtHNR21Qlm_fhyNPeprzUXFTgdnAARpBnOjHFpDcS0s7Ez5C_IzKghC2YYlq3GD23XHs2EMR9Jk2Y1WZSL9Ikqr8MZDIWbMnObjjSmh0nQCaSgkOuAZ4g5U8KA1MiMg-LbzREZgMFuYGPnlk"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-tertiary-fixed p-8 rounded-xl editorial-shadow hidden md:block max-w-[280px] reveal reveal-delay-2">
+<p class="font-headline text-on-tertiary-fixed text-lg italic italic">"A local heritage passed through generations at Verdijeva ulica 5."</p>
+</div>
+</div>
+<div class="reveal reveal-delay-1">
+<span class="text-tertiary font-semibold tracking-widest uppercase text-sm mb-4 block">Our Story</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 text-on-surface">Warm, Authentic &amp; Local</h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+<p>Welcome to Vacation Station Piran. Nestled in a historic stone building at <strong>Verdijeva ulica 5</strong>, our guesthouse is more than just a place to sleep—it's an invitation to live like a local.</p>
+<p>As a family-run establishment, we pride ourselves on providing a warm, authentic atmosphere that reflects the hospitality Piran is known for. Every corner of our house has been curated to ensure you feel the rhythm of the Adriatic from the moment you arrive.</p>
+</div>
+<div class="mt-10 flex gap-6">
+<div class="flex flex-col group cursor-default">
+<span class="text-3xl font-bold text-primary font-headline transform group-hover:scale-110 transition-transform duration-300">10/10</span>
+<span class="text-sm text-on-surface-variant">Guest Rating</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="flex flex-col group cursor-default">
+<span class="text-3xl font-bold text-primary font-headline transform group-hover:scale-110 transition-transform duration-300">Family</span>
+<span class="text-sm text-on-surface-variant">Owned &amp; Operated</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Rooms -->
+<section class="py-24 bg-surface-container-low" id="rooms">
+<div class="container mx-auto px-6 md:px-12 text-center mb-16 reveal">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Our Rooms</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Tailored comfort across three unique living spaces, designed for relaxation and coastal living.</p>
+</div>
+<div class="container mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Studio -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group reveal">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="minimalist modern studio apartment with white walls, wooden accents and bright natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnnp0z9MPS7Gv-LsAk40ePRJ4rvFVUfdvB5P4bEssth_7CUpB3zBRH78NvOVrpMik8g_3Nmt3AVmzuxlxhALATlhFHL3FD6-mzaz3cmtT8O3KY-hmhs1q-1lsG_YMn04ABtrwZ2rvqY6RlMKGFoiRG64IbiyCR2XFWZVOmqvsRSJK8b6_VTOP6YpRFpFFzRQ1PgCWNKhcERy7ctLiKo6I0y145wHo7bj9NUN36CCksG1r9Bdt97qJCE-6jz9rTDJB6UNP--n0UtTk"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold mb-2">Studio</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Perfect for couples seeking a cozy retreat.</p>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">group</span>
+<span class="text-sm">Up to 2 persons</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">bed</span>
+<span class="text-sm">1 Large Double Bed</span>
+</li>
+</ul>
+<div class="flex gap-4">
+<a class="flex-1 text-center py-3 rounded-lg border border-outline-variant text-sm font-medium hover:bg-surface-container-low transition-all" href="#">View Details</a>
+<a class="flex-1 text-center py-3 rounded-lg bg-primary text-on-primary text-sm font-medium hover:bg-primary-container transition-all" href="https://www.booking.com/hotel/si/guesthouse.sl.html?aid=390156">Book Now</a>
+</div>
+</div>
+</div>
+<!-- Studio Upper Floor -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group lg:-mt-4 lg:mb-4 reveal reveal-delay-1">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10">Popular</div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="luxury attic studio with exposed wooden beams and a view of the sea from a small window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPxEdt_sv2Aav4bVXrDSs75Zq_TEI7qPazX3AN_IZH8CvsKXi6AetZfGjdjLsGL-NjI2MpxBCd0DVuesBBSqk5YRHcwqSFvKXcA7KGTaRZGiY2qidrO2OGY9QqFoojfXYIWvlT_wz_oukQ4_mj5le-K6ZTIbc-rBacR7CYxrhii9pvL7KH4Z1E28PNa1Svcf9sVd38qDKHyfNQf1ka4XFhU_cDm9Su-pHzTMaYGQtNkIOA7KdbqxP5ntR-oHoshktnzEXtWvy_G8A"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold mb-2">Studio Upper Floor</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Elevated views and quiet charm.</p>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">group</span>
+<span class="text-sm">Up to 2 persons</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">king_bed</span>
+<span class="text-sm">1 Extra Large Double Bed</span>
+</li>
+</ul>
+<div class="flex gap-4">
+<a class="flex-1 text-center py-3 rounded-lg border border-outline-variant text-sm font-medium hover:bg-surface-container-low transition-all" href="#">View Details</a>
+<a class="flex-1 text-center py-3 rounded-lg bg-primary text-on-primary text-sm font-medium hover:bg-primary-container transition-all" href="https://www.booking.com/hotel/si/guesthouse.sl.html?aid=390156">Book Now</a>
+</div>
+</div>
+</div>
+<!-- Duplex Apartment -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group reveal reveal-delay-2">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="spacious two-level duplex apartment with staircase and open-plan living area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtCY2zKv_yyVQsf2mZ_z4o9XxFE4zwKaDwFsAsQN6NPrJ288hXsd5ujTz6BfitwUGxCWTkEbNPB1nEGjd9OvH-0B_PEj4NzieN6g9LAtjaSdd5z6ppa2Ahsw6JYIZ5A1ZdYVFMY_r7OiYwKhnzvnaF-8MYOmDzzgkpytz19Dzm3syQ4gICr9j9GaVwuSKYHokpk5ukteQt8l5tlXAr67xei5alFfpM_4o9qkL45ZQ6Io6u3b-gzTyMKUO_32Slw-_GgI2dqsyqEAA"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline text-2xl font-bold mb-2">Duplex Apartment</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Spacious living for families or groups.</p>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">group</span>
+<span class="text-sm">Up to 4 persons</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">bed</span>
+<span class="text-sm">2 Large Double Beds</span>
+</li>
+</ul>
+<div class="flex gap-4">
+<a class="flex-1 text-center py-3 rounded-lg border border-outline-variant text-sm font-medium hover:bg-surface-container-low transition-all" href="#">View Details</a>
+<a class="flex-1 text-center py-3 rounded-lg bg-primary text-on-primary text-sm font-medium hover:bg-primary-container transition-all" href="https://www.booking.com/hotel/si/guesthouse.sl.html?aid=390156">Book Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services (Odlično za vaše bivanje) -->
+<section class="py-24 bg-surface" id="services">
+<div class="container mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Odlično za vaše bivanje</h2>
+<p class="text-on-surface-variant">Thoughtful amenities designed to make your stay as comfortable as home.</p>
+</div>
+<div class="hidden md:block h-px flex-1 mx-12 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Group 1: Essentials -->
+<div class="space-y-8 reveal reveal-delay-1">
+<h4 class="font-headline text-xl font-semibold text-primary border-b border-primary/10 pb-4">Essentials</h4>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">wifi</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Free High-Speed WiFi</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">ac_unit</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Air Conditioning</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">tv</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Flat-screen TV</span>
+</div>
+</div>
+</div>
+<!-- Group 2: Kitchen & Bath -->
+<div class="space-y-8 reveal reveal-delay-2">
+<h4 class="font-headline text-xl font-semibold text-primary border-b border-primary/10 pb-4">Kitchen &amp; Bathroom</h4>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">kitchen</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Fully Equipped Kitchenette</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">shower</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Private Shower &amp; Hairdryer</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">local_laundry_service</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Towels &amp; Bed Linens</span>
+</div>
+</div>
+</div>
+<!-- Group 3: Leisure -->
+<div class="space-y-8 reveal reveal-delay-3">
+<h4 class="font-headline text-xl font-semibold text-primary border-b border-primary/10 pb-4">Leisure</h4>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">beach_access</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Beach Access Nearby</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">scuba_diving</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Diving &amp; Activities</span>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center transform group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">hiking</span>
+</div>
+<span class="font-medium group-hover:text-primary transition-colors">Coastal Hiking Paths</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Explore Piran (Expanded Narrative) -->
+<section class="py-24 bg-surface-container-lowest overflow-hidden" id="activities">
+<div class="container mx-auto px-6 md:px-12">
+<div class="max-w-4xl mx-auto text-center mb-20 reveal">
+<span class="text-tertiary font-semibold tracking-widest uppercase text-sm mb-4 block">Destination Guide</span>
+<h2 class="font-headline text-4xl md:text-6xl font-bold mb-8">The Ethereal Adriatic: Piran</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed font-light">
+                Discover a town where time slows to the rhythm of the tides. Piran is not just a destination; it is a centuries-old story written in salt, stone, and the deep blue of the sea.
+            </p>
+</div>
+<!-- History & Architecture Narrative -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+<div class="reveal">
+<h3 class="font-headline text-3xl font-bold mb-6">A Legacy of the Lion</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                Walking through Piran is a journey through its Venetian past. For five centuries, the Republic of Venice left its indelible mark on the town's maritime heritage. The iconic Winged Lion of Saint Mark still watches over the narrow alleyways, a symbol of the era when Piran was a vital hub for trade and naval power.
+            </p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                The architecture is a masterclass in Mediterranean elegance. From the intricate **Gothic** facades of the "Venetian" house to the sprawling **Renaissance** grandeur of **Tartini Square**, the town is a living museum. Every cobblestone leads to a story of sailors, merchants, and the world-renowned violinist Giuseppe Tartini, whose spirit still resonates in the town's cultural heart.
+            </p>
+</div>
+<div class="relative reveal reveal-delay-2">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="close up of Venetian Gothic architectural details on a red historic building in Piran" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClGCqJAG8iCNnRUOobNN2lgFE2nlT_TeEhqjil44WrQsG_Yxc63jm4td8chXY8_M9Q2HN9W9MvkA1NWuYMshP0EMkDPZXeOf6KNjbYdsxhrhT7fMRlUiSgpoW8AV8mtHNR21Qlm_fhyNPeprzUXFTgdnAARpBnOjHFpDcS0s7Ez5C_IzKghC2YYlq3GD23XHs2EMR9Jk2Y1WZSL9Ikqr8MZDIWbMnObjjSmh0nQCaSgkOuAZ4g5U8KA1MiMg-LbzREZgMFuYGPnlk"/>
+</div>
+<div class="absolute -top-6 -left-6 bg-white p-4 rounded-lg shadow-xl hidden lg:block max-w-[200px]">
+<p class="text-xs italic text-slate-500 font-headline">The iconic "Venetienne" - a perfect example of 15th-century Venetian Gothic style.</p>
+</div>
+</div>
+</div>
+<!-- Reasons to Visit / Visual Bento -->
+<div class="mb-16 reveal">
+<h3 class="font-headline text-3xl font-bold mb-8 text-center">Why Piran Enchants</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative rounded-xl overflow-hidden group reveal">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[4000ms] ease-out" data-alt="people swimming in the turquoise sea at the foot of Piran ancient city walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAutfEMPuTD5HvTQXTpwTXVD_6L_hvXDMLEITy5vtW9K0VWqMrrYIC_RfHcNSR1OC8HWzAvrt_ulFCPX7bEZdWYI8Pl8vM-H371KJnjF6rf8eQgutIZYy5eu6WoMV3OwAaVK2jgBlcSNM7WGncH7yCfJxB9Zlw938gEPsHUF3xws7N5jzFKX_e_ERaPQIl-EU72fvIx8ASFNADbzO9618wY_GG_NmIpYJ5w_h3iQPm53-eaG2WlyZY3CdF9V85j2QdQoPaCDv3ZqVU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-all duration-500 group-hover:from-black/90">
+<div>
+<h4 class="text-white text-2xl font-headline font-bold transform transition-transform duration-500 group-hover:-translate-y-1">The Authentic Adriatic</h4>
+<p class="text-white/80 text-sm transform transition-transform duration-500 group-hover:-translate-y-1">Beyond the tourist path, find a genuine Mediterranean soul where locals still gather at the harbor at dusk.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 relative rounded-xl overflow-hidden group reveal reveal-delay-1">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[4000ms] ease-out" data-alt="underwater scuba diver exploring colorful reefs in the Adriatic sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEWUPFeszwpAGHXiyAysBSeWylhnzXJqGVCIvpSeMMtuZxSwiuNQVroiDlONR61IA1HheH_faxbW2Di4CXf3TKKYUJBTAfEdJE4ecSMoGUBnOFbE9KewLbZjBOY6LVxlf21_OO2N9PdS4ZVQSvxGGJv29R1wVMRu3j4Io5-mkk5FnyAt7niI7q6ExfKMSADYJUwuQK35cMKjNxWEzDHqvfsai_n2R3zLwvKyiOrK8RhAzJITh3FI4VHeWoFF6oikLDKRWotPL_ef4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 transition-all duration-500">
+<div>
+<h4 class="text-white text-xl font-headline font-bold transform transition-transform duration-500 group-hover:-translate-y-1">Diving</h4>
+<p class="text-white/60 text-xs hidden group-hover:block transition-all">Explore hidden reefs.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 relative rounded-xl overflow-hidden group reveal reveal-delay-2">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[4000ms] ease-out" data-alt="hiker overlooking the bay of Piran from a high trail with the lighthouse in the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJpfnkIvcaCRg69WtL8I1ELxjSNR7sc4fL6TOHf0oBiDpP3uJLpWvA38GVQ7a5Z29w6TL8ahxKGpVE0ufgZhLPpJeGOR0Y5b17V27sciRzb67jZpB6F6_8_-ynasdH7buUVn-RPqSmvPn1PX7GLBkQIUUKeX_ZCfV-4m5-xCXDPsL3D8PJUyfiw_Gc1tknu5fp9_Kati5ym9b4Ebk3N_Yett5rA5_4_8uAD_FG4VyHX8Xc0tR_hCWkNEkFKMjq4u5aMWtAlRaIKfA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 transition-all duration-500">
+<div>
+<h4 class="text-white text-xl font-headline font-bold transform transition-transform duration-500 group-hover:-translate-y-1">Coastal Views</h4>
+<p class="text-white/60 text-xs hidden group-hover:block transition-all">Hiking with a sea breeze.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 relative rounded-xl overflow-hidden group reveal reveal-delay-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[4000ms] ease-out" data-alt="aerial view of the salt pans of Piran with geometric pools reflecting the sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw0iL4nCkQ9gFreUVZJodWfP0o8rCfeSfvMbzIl-9BdBqJEbqJSEgCoj4OFlk1o2awUK4rknIc7VIARB5IMQiq_qgOZTN4K3Q7V6Q9i0QRbC-QJmWbxJKCzifLgsW1OvnLqCcLaL1runUOlFMdt9nsrxP24U5EiGk2A32Gar8oMOqbZZa59kLJd5J-uKIdke91tmIDte7JWT6OPfKuC5M8dFN21BKTkYANE8lgy6wtImprC1gsglChEhyztLZxyiQLQRCpWwQn-iY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8 transition-all duration-500 group-hover:from-black/90">
+<div>
+<h4 class="text-white text-2xl font-headline font-bold transform transition-transform duration-500 group-hover:-translate-y-1">The Salt Pans</h4>
+<p class="text-white/80 text-sm transform transition-transform duration-500 group-hover:-translate-y-1">The famous Sečovlje Salt Pans, where "white gold" is still harvested by hand today.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center reveal reveal-delay-4 mt-12">
+<p class="font-headline italic text-primary text-xl">"Piran is for those who seek beauty in the details—the curve of an arch, the taste of sea salt, the warmth of the sun on old stone."</p>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
+<div class="container mx-auto px-6 md:px-12 relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-16 text-center reveal">Guest Experiences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full reveal">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">10/10</div>
+</div>
+<p class="text-on-surface-variant italic mb-6 text-sm leading-relaxed flex-grow">"We stayed in the No. 4 deluxe apartment, which is spread over multiple levels and includes a rooftop terrace. We visit Piran frequently and have stayed in many lovely places, but Vacation Station is among the very best. It is clean, comfortable, well-equipped, and in a great location. Katja responded to all our questions within minutes, and communication with her was easy. Thank you!"</p>
+<div class="font-bold text-primary">— Balázs</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:translate-y-8 flex flex-col h-full reveal reveal-delay-1">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">10/10</div>
+</div>
+<p class="text-on-surface-variant italic mb-6 text-sm leading-relaxed flex-grow">"Apartma je res super. Dupleks v stari piranski hiši, na vrhu pa še terasa na strehi. Je zelo čisto in okusno opremljeno."</p>
+<div class="font-bold text-primary">— Jaka</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full reveal reveal-delay-2">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">10/10</div>
+</div>
+<p class="text-on-surface-variant italic mb-6 text-sm leading-relaxed flex-grow">"The outdoor deck. Stunning views over the roofs, sea and St George’s church. We relaxed a lot. Great communication with the owner, very friendly. Easy to get in. Yes there are stairs but worth it for the view, we were apartment 4. Very peaceful and quiet. Highly recommend. We were there for three nights. There was enough loo roll. Basic supplies were in the kitchen too, which is lovely to have."</p>
+<div class="font-bold text-primary">— Natasha</div>
+</div>
+<!-- Review 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:translate-y-8 flex flex-col h-full reveal reveal-delay-3">
+<div class="flex justify-between items-start mb-6">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">10/10</div>
+</div>
+<p class="text-on-surface-variant italic mb-6 text-sm leading-relaxed flex-grow">"The location and the kindness of the owner was more than perfect. In the middle of the city but next to the beach and on the other hand silent during the night."</p>
+<div class="font-bold text-primary">— Zsolt</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Location -->
+<section class="py-24 bg-surface-container-low" id="contact">
+<div class="container mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="reveal">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Get in Touch</h2>
+<p class="text-on-surface-variant mb-12 text-lg">We would love to hear from you. Whether you have a question about booking or want local tips, feel free to reach out.</p>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Your Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="email@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-4 rounded-xl shadow-lg hover:shadow-primary/20 hover:bg-primary-container transition-all duration-300 transform active:scale-[0.98]" type="submit">Send Message</button>
+</form>
+</div>
+<div class="flex flex-col reveal reveal-delay-2">
+<div class="flex-1 bg-surface-container-high rounded-xl overflow-hidden min-h-[300px] shadow-inner relative group">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 flex items-center justify-center p-12 text-center z-10">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-primary mb-4 transform group-hover:bounce-slow transition-transform duration-300">location_on</span>
+<p class="font-headline text-xl font-bold">Verdijeva ulica 5, 6330 Piran, Slovenia</p>
+</div>
+</div>
+<img class="w-full h-full object-cover opacity-20 grayscale transform group-hover:scale-110 transition-transform duration-[10000ms]" data-location="Piran" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKEvGtszx0v0Pb8VcHK3_YjBhWaCVtN4OQQVyaZqhPGsau0N74oRNl84P76FFy74OHvYMF-Chj8Hv5fnFuRm1JJ7jWeI83gjPjrxYU11t_frsfWiVHEP0cLZnFVVOKXIS3h0rzrXbhNRVIJdK0Gs0EUlC3XNdZgubJsZLi2_XR-Njm_F_GcHUXs1dV9TfqBB_y4vA11tOCuZ124Ku2yHEp3Ux32oZjstjjspKnh3oAVQ1b49SjjLgrMkhWfQ9lvt7B1dX0yPq62c0"/>
+</div>
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Email Us</p>
+<p class="font-semibold text-primary truncate">info@vacationstationpiran.com</p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<p class="text-xs text-on-surface-variant uppercase font-bold mb-2">Call Us</p>
+<p class="font-semibold text-primary">+386 00 000 000</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impresum (Legal Information) -->
+<section class="py-16 bg-surface border-t border-outline-variant/10">
+<div class="container mx-auto px-6 md:px-12">
+<div class="max-w-4xl mx-auto">
+<h3 class="font-headline text-2xl font-bold mb-8 text-on-surface/80 border-b border-primary/10 pb-2">Impresum</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-sm text-on-surface-variant/80">
+<div>
+<p class="font-bold text-on-surface mb-1 uppercase tracking-wider text-[10px]">Legal Entity</p>
+<p class="font-headline italic text-base">[Legal Entity Name]</p>
+</div>
+<div>
+<p class="font-bold text-on-surface mb-1 uppercase tracking-wider text-[10px]">Registered Address</p>
+<p class="font-headline italic text-base">Verdijeva ulica 5, 6330 Piran, Slovenia</p>
+</div>
+<div>
+<p class="font-bold text-on-surface mb-1 uppercase tracking-wider text-[10px]">Tax ID</p>
+<p class="font-headline italic text-base">[Tax ID Number]</p>
+</div>
+<div>
+<p class="font-bold text-on-surface mb-1 uppercase tracking-wider text-[10px]">Registration Number</p>
+<p class="font-headline italic text-base">[Registration Number]</p>
+</div>
+<div>
+<p class="font-bold text-on-surface mb-1 uppercase tracking-wider text-[10px]">Representative</p>
+<p class="font-headline italic text-base">[Representative Name]</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 md:px-12 bg-stone-100 border-t border-[#1a1c1c]/10">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<div class="space-y-4">
+<div class="font-headline text-xl font-semibold text-[#005695]">Vacation Station Piran</div>
+<p class="text-slate-600 font-body text-sm leading-relaxed">
+                A family-run retreat in Slovenia's most beautiful coastal town. Experience the Mediterranean as it was meant to be.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface mb-2">Explore</h5>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="#about">About Us</a>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="#rooms">Our Rooms</a>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="#services">Services</a>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="https://www.booking.com/hotel/si/guesthouse.sl.html?aid=390156">Book Now</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-bold text-on-surface mb-2">Legal</h5>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-600 text-sm hover:text-[#873f32] transition-colors" href="#">Cookie Settings</a>
+<p class="text-slate-600 text-sm pt-4">© 2024 Vacation Station Piran. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Handle scroll reveal
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    // Handle navbar transformation
+    function scrollHeader() {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY >= 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", scrollHeader);
+
+    // Initial check on load
+    reveal();
+    scrollHeader();
+</script>
+</body></html>
